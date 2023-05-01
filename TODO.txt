@@ -1,0 +1,5 @@
+
+- add an dropdown to choose which igure to use - circles,dots,alphabest, triangle etc.
+- add a browse button
+- add a option to save gif
+- now only work for grayscale images
