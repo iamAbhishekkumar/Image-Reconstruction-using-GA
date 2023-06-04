@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+.outer_container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#752B2B;
+}
+.title_container{
+    display: flex;
+    justify-content: center;   
+}
+
+.title_container h1{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    size: 40px;
+}
+.form_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form_first_part{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.input_field{
+    display: none;
+}
+.button_tag{
+    border-radius: 10px;
+    height: 60px;
+    width: 218px;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #D9D9D9;
+    border: 0;
+    cursor: pointer;
+}
+.form_second_part{
+    display: flex;
+    margin: 20 20 20 20;
+    flex-direction:row;
+}
+.column_1{
+    width: 30%;
+    
+}
+.column_1 div h3{
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.column_1 div input{
+    border: none;
+    width: 270px;
+    height: 47px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+.column_2{
+    width: 40%;
+    
+}
+.column_2 div h3{
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.shape_list{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.shape_list div{
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+    margin-right: 20px;
+}
+.shape_list div input{
+    width: 20px;
+    height: 20px;
+}
+.column_3{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column_3 button{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

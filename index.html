@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Image reconstruction using GA</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="outer_container">
+            <div class="title_container">
+                <h1>Image Reconstruction Using Genetic Algorithm</h1>
+            </div>
+            <div class="form_container">
+                <form action="/" method="POST">
+                    <div class="form_first_part">
+                        <input type="file" id="img_file_id" name="image_file" class="input_field"/>
+                        <button id="btn" class="button_tag">Select Image</button>
+                    </div>
+                    <div class="form_second_part">
+                        <div class="column_1">
+                            <div><h3>Random string length</h3></div>
+                            <div><input type="text" name="string_length" placeholder="Length should be b/t 2-4"></div>
+                        </div>
+                        <div class="column_2">
+                            <div><h3>Select shapes</h3></div>
+                            <div class="shape_list">
+                                <div><input type="checkbox" name="circle" value="circle">Circle</div>
+                                <div><input type="checkbox" name="triangle" value="triangle">Triangle</div>
+                                <div><input type="checkbox" name="rectangle" value="rectangle">Rectangle</div>
+                                <div><input type="checkbox" name="vertical_lines" value="Vertical_lines">Vertical Lines</div>
+                            </div>
+                        </div>
+                        <div class="column_3">
+                            <button>Generate Image</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    let button = document.getElementById("btn")
+    let input = document.getElementById("img_file_id")
+    button.addEventListener("click",myFunc)
+
+    function myFunc(){
+        input.click()
+    }
+</script>
