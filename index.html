@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Image reconstruction using GA</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/staticFiles/style.css" />
     </head>
     <body>
         <div class="outer_container">
@@ -12,7 +12,7 @@
                 <form action="/" method="POST">
                     <div class="form_first_part">
                         <input type="file" id="img_file_id" name="image_file" class="input_field"/>
-                        <button id="btn" class="button_tag">Select Image</button>
+                        <button id="btn" class="button_tag" type="submit">Select Image</button>
                     </div>
                     <div class="form_second_part">
                         <div class="column_1">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="column_3">
-                            <button>Generate Image</button>
+                            <button formaction="/gen">Generate Image</button>
                         </div>
                     </div>
                 </form>
