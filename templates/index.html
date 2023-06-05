@@ -9,10 +9,11 @@
                 <h1>Image Reconstruction Using Genetic Algorithm</h1>
             </div>
             <div class="form_container">
-                <form action="/" method="POST">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
                     <div class="form_first_part">
                         <input type="file" id="img_file_id" name="image_file" class="input_field"/>
-                        <button id="btn" class="button_tag" type="submit">Select Image</button>
+                        <button id="btn" class="button_tag">Select Image</button>
+
                     </div>
                     <div class="form_second_part">
                         <div class="column_1">
@@ -29,7 +30,7 @@
                             </div>
                         </div>
                         <div class="column_3">
-                            <button formaction="/gen">Generate Image</button>
+                            <input type="submit" value="Generate Image"/>
                         </div>
                     </div>
                 </form>

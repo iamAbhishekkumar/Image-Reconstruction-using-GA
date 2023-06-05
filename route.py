@@ -12,13 +12,13 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/', methods=('POST', 'GET'))
+@app.route('/upload', methods=('POST', 'GET'))
 def source():
     if request.method == 'POST':
-        source_img = request.form['image_file']
-        print(source_img.filename)
-        img = secure_filename(source_img.filename)
-        source_img.save(os.path.join(app.config['UPLOAD_PATH'], img))
+        source_img = request.files['image_file']
+        print(source_img)
+        # img = secure_filename(source_img.filename)
+        # source_img.save(os.path.join(app.config['UPLOAD_PATH'], img))
         return redirect("/")
         # session['staticFiles/uploads'] = os.path.join(app.config['UPLOAD_FOLDER'], img)
 
