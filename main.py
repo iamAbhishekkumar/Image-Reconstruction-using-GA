@@ -29,17 +29,19 @@ def combine(img1, img2):
     return vis
 
 
-def pipleline(path_to_img):
+c = 0
+
+
+def pipleline(path_to_img, shape):
 
     # Loading image convering to B/W
     target_img = Image.open(path_to_img).convert("L")
-    cv2.imshow("Source Image", np.array(target_img))
-    cv2.imwrite("Source.jpg", np.array(target_img))
 
     gif_imgs = []  # Creating empty frames list for gif saving at the end
 
     # Creating first generation
-    utils = Utils(target_img)
+    utils = Utils(target_img, shape)
+    print(shape)
     population = utils.create_random_population(POPULATION_NUMBER)
     blck_img = np.zeros(
         (target_img.size[1], target_img.size[0] + 200), dtype=np.uint8)
@@ -82,26 +84,18 @@ def pipleline(path_to_img):
              f"Generation : {generation}", (target_img.size[0] + 100, 50))
         info(open_cv_image,
              f"Fitness : {top_population_ids[0]}", (target_img.size[0] + 100, 100))
-        cv2.setWindowProperty('Generating Image',
-                              cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-        cv2.imshow("Generating Image", open_cv_image)
-
         # Gif creation
+
+        ret, buffer = cv2.imencode('.jpg', open_cv_image)
+        frame = buffer.tobytes()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
         if generation % SAVE_FRAME_FOR_GIF_EVERY == 0:
             gif_imgs.append(open_cv_image)
 
-        cv2.waitKey(1)
         population = new_population
 
     # Save gif and best output
-    imageio.mimsave("Output Gif.gif", gif_imgs)
-    cv2.imwrite("Final Output.jpg", open_cv_image)
-
-
-def main():
-    path_to_img = "girl.jpg"
-    pipleline(path_to_img)
-
-
-if __name__ == "__main__":
-    main()
+    imageio.mimsave("output.gif", gif_imgs)
+    cv2.imwrite("output.jpg", open_cv_image)

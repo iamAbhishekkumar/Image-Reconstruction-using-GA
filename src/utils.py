@@ -1,16 +1,17 @@
 import random
 import numpy as np
+from src.figures import Figures
 from src.constants import *
 from PIL import ImageDraw, Image
 from skimage.metrics import peak_signal_noise_ratio as psns
-from src.shape import Shape
 from src.imageProcessing import ImageProcessing
 
 
 class Utils:
-    def __init__(self, target_img) -> None:
+    def __init__(self, target_img, fig: str) -> None:
         self.target_img = target_img
         self.T_H, self.T_W = self.target_img.size
+        self.fig = fig
 
     def add_random_shape_to_image(self, image, number_of_shapes):
         """Add shape with random proporties to image number_of_shapes times."""
@@ -18,8 +19,15 @@ class Utils:
 
         for _ in range(0, number_of_shapes):
             draw = ImageDraw.Draw(image_filled)
-            shape = Shape(draw, self.target_img)
-            shape.draw_text()  # shape to draw
+            figure = Figures(draw, self.target_img)
+            if self.fig == 'circle':
+                figure.draw_circles()
+            elif self.fig == 'rectangle':
+                figure.draw_rectangle()
+            elif self.fig == 'line':
+                figure.draw_line()
+            elif self.fig == 'text':
+                figure.draw_text()
         return image_filled
 
     def create_random_population(self, size):
