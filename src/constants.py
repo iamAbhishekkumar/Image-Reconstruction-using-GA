@@ -1,5 +1,5 @@
 # Adjust hyperparameters
-NUMBER_OF_GENERATIONS = 10
+NUMBER_OF_GENERATIONS = 7500
 POPULATION_NUMBER = 50  # How many images in 1 generation (without elitism)
 MUTATION_CHANCE = 0.1  # Chance of mutating (adding random shapes)
 MUTATION_STRENGTH = 1  # How many shapes to add in mutation
