@@ -1,5 +1,5 @@
 # Adjust hyperparameters
-NUMBER_OF_GENERATIONS = 7500
+NUMBER_OF_GENERATIONS = 10
 POPULATION_NUMBER = 50  # How many images in 1 generation (without elitism)
 MUTATION_CHANCE = 0.1  # Chance of mutating (adding random shapes)
 MUTATION_STRENGTH = 1  # How many shapes to add in mutation
@@ -12,3 +12,5 @@ STARTING_SHAPE_NUMBER = 6  # How many shapes to draw on each image in first gene
 PRINT_EVERY_GEN = 25  # Print fitness value every x generations
 # Save best image every x generations for gif creation
 SAVE_FRAME_FOR_GIF_EVERY = 100
+
+IMG_PATH = 'tmp/tmp.jpg'

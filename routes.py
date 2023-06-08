@@ -1,9 +1,9 @@
 from main import pipleline
 from flask import Flask, Response, render_template, request, redirect, url_for
-
+from src.constants import IMG_PATH
 app = Flask(__name__)
 
-IMG_PATH = 'tmp/tmp.jpg'
+
 SHAPE = None
 current_frame = 0
 
