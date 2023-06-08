@@ -16,7 +16,7 @@ python main.py
 
 ![img](outputs/imgs/avatar.jpg)
 
-![img](outputs/gifs/ironman_2.gif)
+![img](outputs/gifs/ironman_2.jpg)
 
 ![img](outputs/imgs/ironman.jpg)
 
