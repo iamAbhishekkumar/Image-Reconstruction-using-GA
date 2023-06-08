@@ -1,5 +1,5 @@
 from main import pipleline
-from flask import Flask, Response, render_template, request, redirect, url_for
+from flask import Flask, Response, render_template, request, redirect
 from src.constants import IMG_PATH
 app = Flask(__name__)
 
