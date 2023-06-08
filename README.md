@@ -26,4 +26,4 @@ Here, Peak signal-to-noise ratio (PSNR) used as fitness function to evaluate sim
 
 ## Preview of Web App
 
-![img](outputs/imgs/webpage_ss.png)
+![img](outputs/imgs/webapp.png)
