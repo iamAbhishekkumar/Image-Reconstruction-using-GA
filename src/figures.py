@@ -26,11 +26,10 @@ class Figures:
         x2 = random.randint(0, self.T_W-1)
         y2 = random.randint(0, self.T_H-1)
 
-        thickness_value = random.randint(1, 4)
         color = (random.randint(0, 255))
 
         self.image.line([(y1, x1), (y2, x2)], fill=color,
-                        width=thickness_value)
+                        width=1)
 
     def draw_text(self, size=20):
         """Draw random text on image with given size."""
